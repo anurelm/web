@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="widht=device-widht, initial-scale=1" />
+
+        <title>Writing to the page</title>
+
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script> 
+    </head>
+        <body>
+            <script>
+                name = "Guido"
+            
+                function addTwoNumbers(x, y) {
+                    return x + y;
+                }
+            </script> 
+            
+            <py-script>
+                from js import name, addTwoNumbers
+            
+                print(f"Hello {name}")
+                print("Adding 1 and 2 in Javascript: " + str(addTwoNumbers(1, 2)))
+            </py-script>
+        </body>
+</html>
