@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="widht=device-widht, initial-scale=1" />
+
+    <title>Writing to the page</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+
+<body>
+    <py-script>x = 42</py-script>
+
+    <button onclick="showX()">Click Me To Get 'x' from Python</button>
+    <script>
+        function showX() {
+            console.log(`In Python right now, x = ${pyscript.runtime.globals.get    
+                ('x')}`)
+        }
+    </script>
+</body>
+
+<body>
+    <button onclick="sortInPython(['Candy', 'Donut', 'Apple', 'Banana'])">Sort In Python And Log</button>
+    <script>
+        function sortInPython(data) {
+            js_sorted = pyscript.runtime.globals.get
+            ('sorted')
+            const sorted_data = js_sorted
+            (data)
+            for (const item of sorted_data) {
+                console.log(item)
+            }
+        }
+    </script>
+</body>
+
+<body>
+    <script>
+        function createObject(object, variableName) {
+            let execString = variableName + " = object"
+            console.log("Running '" + execString + "'");
+            eval(execString)
+        }
+    </script>
+    <py-script> 
+        from js import createObject
+        from pyodide.ffi import create_proxy
+        createObject(create_proxy(globals()), "pyodideGlobals")
+    </py-script>
+    <py-script>
+        symbols = {'pi': 3.1415926, 'e': 2.7182818}
+
+    def rough_exponential(x):
+        return symbols['e']**x
+
+    class Circle():
+        def __init__(self, radius):
+            self.radius = radius
+
+        @property
+        def area(self):
+            return symbols['pi'] * self.radius**2
+    </py-script>
+    <input type="button" value="Log Python Variables" id="do-math">
+    <script>
+        document.getElementById("do-math").addEventListener("click", () => {
+            const exp = pyodideGlobals.get('rough_exponential');
+            console.log(`e squared is about ${exp(2)}`);
+            const c = pyodideGlobals.get('Circle')(4);
+            console.log(`The area of c is ${c.area}`);
+        });
+    </script>
+    <py-script>
+        import js
+        from pyodide.ffi import create_proxy
+
+        language = "Python 3"
+        animals = ['dog', 'cat', 'bird']
+        multiply3 = lambda a, b, c: a * b * c 
+
+        js.createObject(language, "language")
+
+        js.createObject(create_proxy (animals), "animals_from_py")
+
+        js.createObject(create_proxy(multiply3), "multiply")
+    </py-script>
+    <input type="button" value="Log Python Variables" id="log-python-variables">
+    <script>
+        document.getElementById("log-python-variables").addEventListener("click", () => {
+    console.log(`Nice job using ${language}`);
+    for (const animal of animals_from_py){
+      console.log(`Do you like ${animal}s? `);
+    }
+    console.log(`2 times 3 times 4 is ${multiply(2,3,4)}`);
+  });
+    </script>
+</body>
+
+</html>
