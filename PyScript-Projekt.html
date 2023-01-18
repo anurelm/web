@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>PyScript-Projekt</title>
+<meta name="generator" content="Etherpad">
+<meta name="author" content="Etherpad">
+<meta name="changedby" content="Etherpad">
+<meta charset="utf-8">
+<style>
+* {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+}
+ul.indent {
+  list-style-type: none;
+}
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+body > ol {
+  counter-reset: first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth;
+}
+ol > li:before {
+  content: counter(first) ". ";
+  counter-increment: first;
+}
+ol > ol > li:before {
+  content: counter(first) "." counter(second) ". ";
+  counter-increment: second;
+}
+ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) ". ";
+  counter-increment: third;
+}
+ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) ". ";
+  counter-increment: fourth;
+}
+ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) ". ";
+  counter-increment: fifth;
+}
+ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) ". ";
+  counter-increment: sixth;
+}
+ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) ". ";
+  counter-increment: seventh;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) ". ";
+  counter-increment: eighth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) ". ";
+  counter-increment: ninth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) ". ";
+  counter-increment: tenth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) ". ";
+  counter-increment: eleventh;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) "." counter(twelfth) ". ";
+  counter-increment: twelfth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) "." counter(twelfth) "." counter(thirteenth) ". ";
+  counter-increment: thirteenth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) "." counter(twelfth) "." counter(thirteenth) "." counter(fourteenth) ". ";
+  counter-increment: fourteenth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) "." counter(twelfth) "." counter(thirteenth) "." counter(fourteenth) "." counter(fifteenth) ". ";
+  counter-increment: fifteenth;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > li:before {
+  content: counter(first) "." counter(second) "." counter(third) "." counter(fourth) "." counter(fifth) "." counter(sixth) "." counter(seventh) "." counter(eighth) "." counter(ninth) "." counter(tenth) "." counter(eleventh) "." counter(twelfth) "." counter(thirteenth) "." counter(fourteenth) "." counter(fifteenth) "." counter(sixteenth) ". ";
+  counter-increment: sixteenth;
+}
+ol {
+  text-indent: 0px;
+}
+ol > ol {
+  text-indent: 10px;
+}
+ol > ol > ol {
+  text-indent: 20px;
+}
+ol > ol > ol > ol {
+  text-indent: 30px;
+}
+ol > ol > ol > ol > ol {
+  text-indent: 40px;
+}
+ol > ol > ol > ol > ol > ol {
+  text-indent: 50px;
+}
+ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 60px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 70px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 80px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 90px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 100px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 110px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 120px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 130px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 140px;
+}
+ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol > ol {
+  text-indent: 150px;
+}
+sub{vertical-align:sub;font-size:smaller}
+</style>
+</head>
+<body>
+<br><br>*Aufgaben und ungef&#228;hrer Ablaufplan<br><br>*Tag 1 - 9. Januar<br><ul class="bullet"><li>Ankommen in der PTB, Einrichten des Arbeitsplatzes, Kennenlernen des Kollegiums</li><li>Einlesen in PyScript und fundamentale Einrichtungsschritte: <a href="https&#x3a;&#x2F;&#x2F;docs&#x2e;pyscript&#x2e;net&#x2F;latest&#x2F;tutorials&#x2F;getting&#x2d;started&#x2e;html">https:&#x2F;&#x2F;docs.pyscript.net&#x2F;latest&#x2F;tutorials&#x2F;getting-started.html</a></ul><br>*Tag 2 - 10. Januar<br><ul class="bullet"><li>Umsetzung einfacher Demos von <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;</a> auf dem eigenen Arbeitsrechner<ul class="bullet"><li>&quot;Hello World&quot; - <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;hello&#x5f;world&#x2e;html">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;hello_world.html</a><ul class="bullet"><li>&#196;ndern des angezeigten Texts</li><li>&#196;ndern des Formats f&#252;r die Anzeige von Datum und Uhrzeit</ul><li>Code live eingeben und ausf&#252;hren: <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;repl2&#x2e;html">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;repl2.html</a><ul class="bullet"><li>Erg&#228;nzen von erl&#228;uternden Textelementen</li><li>Einbinden einer scipy-Bibliothek</ul></li></ul></li></ul><br>*Tag 3 - 11. Januar<br><ul class="bullet"><li>Umsetzung weiterer Demos von <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;</a> auf dem eigenen Arbeitsrechner<ul class="bullet"><li>Ausgabe einer Grafik mit Matplotlib: <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;matplotlib&#x2e;html">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;matplotlib.html</a><ul class="bullet"><li>Ersetzen der Berechnung durch ein anderes Beispiel</li><li>Anpassen der Achsendarstellung und Beschriftung</ul><li>Ausgabe einer Grafik mit Bokeh: <a href="https&#x3a;&#x2F;&#x2F;pyscript&#x2e;net&#x2F;examples&#x2F;bokeh&#x2e;html">https:&#x2F;&#x2F;pyscript.net&#x2F;examples&#x2F;bokeh.html</a><ul class="bullet"><li>Ersetzen der Daten durch die Berechnung aus dem Matplotlib-Beispiel</ul></li></ul></li></ul><br>*Tag 4 - 12. Januar<br><ul class="bullet"><li>Beginn Einarbeitung in PyDynamic<ul class="bullet"><li>Einrichtung lokal auf dem Arbeitsrechner</li><li>Ausgew&#228;hltes Beispiel laufen lassen und mit den Parameter spielen</ul></li></ul><br>*Tag 5-10 (13. - 20. Januar)<br><ul class="bullet"><li>Beginn &#220;bertragung des ausgew&#228;hlten Beispiels in PyScript</li><li>Folgende kommen aus Bj&#246;rns Sicht generell in Frage:<ul class="bullet"><li>einfache Beispiele:<ul class="bullet"><li>PyDynamic&#x2F;FIRuncFilter_runtime_comparison.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;FIRuncFilter&#x5f;runtime&#x5f;comparison&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;FIRuncFilter_runtime_comparison.py</a></li><li>PyDynamic&#x2F;validate_DWT_monte_carlo.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;validate&#x5f;DWT&#x5f;monte&#x5f;carlo&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;validate_DWT_monte_carlo.py</a></li><li>PyDynamic&#x2F;validate_FIR_IIR_MC.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;validate&#x5f;FIR&#x5f;IIR&#x5f;MC&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;validate_FIR_IIR_MC.py</a></ul></li></ul></li></ul><br><ul class="bullet"><li><ul class="bullet"><li>Fortgeschrittene Beispiele:<ul class="bullet"><li>PyDynamic&#x2F;identify_IIR.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;identify&#x5f;IIR&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;identify_IIR.py</a></li><li>PyDynamic&#x2F;uncpropagation_FIR.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;uncpropagation&#x5f;FIR&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;uncpropagation_FIR.py</a></li><li>PyDynamic&#x2F;uncpropagation_IIR.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;uncpropagation&#x5f;IIR&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;uncpropagation_IIR.py</a></li><li>PyDynamic&#x2F;validate_FIRuncFilter.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;validate&#x5f;FIRuncFilter&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;validate_FIRuncFilter.py</a></li><li>PyDynamic&#x2F;realtime_dwt.py: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;realtime&#x5f;dwt&#x2e;py">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;realtime_dwt.py</a></ul></li></ul></li></ul><br><ul class="bullet"><li><ul class="bullet"><li>Endgegner:<ul class="bullet"><li>PyDynamic&#x2F;Design of a digital deconvolution filter (FIR type).ipynb:(<a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital&#x5f;filtering&#x2F;Design&#x25;20of&#x25;20a&#x25;20digital&#x25;20deconvolution&#x25;20filter&#x25;20&#x28;FIR&#x25;20type&#x29;&#x2e;ipynb&#x29;">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;digital_filtering&#x2F;Design%20of%20a%20digital%20deconvolution%20filter%20(FIR%20type).ipynb)</a></li><li>PyDynamic&#x2F;DFT and iDFT with PyDynamic - best practice guide and use cases.ipynb: <a href="https&#x3a;&#x2F;&#x2F;github&#x2e;com&#x2F;PTB&#x2d;M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;DFT&#x25;20and&#x25;20iDFT&#x25;20with&#x25;20PyDynamic&#x25;20&#x2d;&#x25;20best&#x25;20practice&#x25;20guide&#x25;20and&#x25;20use&#x25;20cases&#x2e;ipynb">https:&#x2F;&#x2F;github.com&#x2F;PTB-M4D&#x2F;PyDynamic&#x2F;blob&#x2F;main&#x2F;src&#x2F;PyDynamic&#x2F;examples&#x2F;DFT%20and%20iDFT%20with%20PyDynamic%20-%20best%20practice%20guide%20and%20use%20cases.ipynb</a></ul></li></ul></li></ul><br>*Tag 11-13 (23.-26. Januar)<br><ul class="bullet"><li>Zusammenfassung der Aktivit&#228;ten in einem kurzen Praktikumsbericht</ul><br>*Backlog<br><ul class="bullet"><li>&#220;bersetzungsprozess von *.py zu *.html automatisieren&nbsp;</ul>
+</body>
+</html>
