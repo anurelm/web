@@ -11,4 +11,3 @@
 
 - [Data Science from Scratch](https://www.oreilly.com/library/view/data-science-from/9781492041122/) by Joel Grus, 2nd Eds., O'Reilly
 - [PyTorch kompakt](https://oreilly.de/produkt/pytorch-kompakt/) by Joe Papa, 2nd Eds., O'Reilly
-- 
